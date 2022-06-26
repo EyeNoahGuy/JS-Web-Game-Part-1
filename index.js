@@ -29,3 +29,23 @@ function newItem(url, left, bottom){
         object.remove()
     })
 }
+
+let heightOfSky = window.innerHeight-horizon
+let horizon = window.innerHeight / 1
+let heightOfGrass = horizon
+//Background
+tile('assets/sky.png', 0, horizon, window.innerWidth/100, heightOfSky/100)
+tile('assets/grass.png', 0, 0, window.innerWidth/100, heightOfGrass/100)
+
+//Enviroment 
+newImage('assets/green-character.gif', 100, 100)
+newImage('assets/tree.png', 200 , 300)
+newImage('assets/pine-tree.png', 450, 200)
+newImage('assets/well.png', 500 , 400)
+newImage('assets/pillar.png', 300, 100)
+newImage('assets/crate.png', 100 , 200)
+
+//Items
+newItem('assets/sword.png', 500, 400)
+newItem('assets/shield.png', 150 , 150)
+newItem('assets/staff.png', 500 , 100)
