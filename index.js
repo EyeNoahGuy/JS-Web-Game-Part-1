@@ -49,3 +49,39 @@ newImage('assets/crate.png', 100 , 200)
 newItem('assets/sword.png', 500, 400)
 newItem('assets/shield.png', 150 , 150)
 newItem('assets/staff.png', 500 , 100)
+
+//Placement of Player
+const inventory = newInventory()
+move(inventory).to(0, 0)
+
+const character = newImage('assets/green-character/static.gif')
+
+function handleDirectionChange(direction){
+    if(direction === null){
+        character.src = 'assets/green-character/static.gif'
+    }
+    if(direction === 'west'){
+        character.src = 'assets/green-character/static.gif'
+    }
+    if(direction === 'east'){
+        character.src = 'assets/green-character/static.gif'
+    }
+    if(direction === 'north'){
+        character.src = 'assets/green-character/static.gif'
+    }
+    if(direction === 'south'){
+        character.src = 'assets/green-character/static.gif'
+    }
+}
+
+move(character).withArrowKeys(100, 250, handleDirectionChange)
+
+//Item Movements
+move(newItem('assets/tree.png')).to(200, 450)
+move(newImage('assets/pine-tree.png')).to(450, 350)
+move(newImage('assets/crate.png')).to(150, 350)
+move(newImage('assets/pillar.png')).to(350, 250)
+move(newImage('assets/well.png')).to(500, 575)
+move(newImage('assets/shield.png')).to(165, 335)
+move(newImage('assets/staff.png')).to(600, 250)
+move(newImage('assets/sword.png')).to(500, 555)
